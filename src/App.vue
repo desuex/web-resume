@@ -94,24 +94,22 @@ useHead({
         {property: 'og:title', content: pageTitle},
         {property: 'og:description', content: pageDescription},
         {property: 'og:locale', content: ogLocale},
-        // { property: 'og:image', content: `${SITE_URL}/og-image.png` },
+        { property: 'og:image', content: `${SITE_URL}/og-image.png` },
 
         {name: 'twitter:card', content: 'summary_large_image'},
         {name: 'twitter:url', content: SITE_URL},
         {name: 'twitter:title', content: pageTitle},
         {name: 'twitter:description', content: pageDescription},
-        // { name: 'twitter:image', content: `${SITE_URL}/og-image.png`}
+        { name: 'twitter:image', content: `${SITE_URL}/og-image.png`},
 
         {name: 'theme-color', content: '#0f172a'},
       ],
       link: [
-        // {rel: 'apple-touch-icon', sizes: '180x180', href: '/favicons/apple-touch-icon.png'},
         {rel: 'canonical', href: SITE_URL},
 
         {rel: 'alternate', hreflang: 'en', href: `${SITE_URL}?lang=en`},
         {rel: 'alternate', hreflang: 'ru', href: `${SITE_URL}?lang=ru`},
         {rel: 'alternate', hreflang: 'x-default', href: SITE_URL},
-        // {rel: 'manifest', href: '/manifest.json'},
 
         {rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicons/favicon-16x16.png'},
         {rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicons/favicon-32x32.png'},
