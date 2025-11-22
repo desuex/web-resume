@@ -4,17 +4,16 @@ import { useI18n } from "vue-i18n";
 const {t, tm} = useI18n();
 const projects = computed(() => tm('projects.items'));
 
-// import optimoveLogo from '../assets/logos/optimove.svg'
-// import streamwaveLogo from '../assets/logos/streamwave.svg'
-// import lexpointLogo from '../assets/logos/lexpoint.svg'
-// import aerotripLogo from '../assets/logos/aerotrip.svg'
-//
-// const logos = {
-//   optimove: optimoveLogo,
-//   streamwave: streamwaveLogo,
-//   lexpoint: lexpointLogo,
-//   aerotrip: aerotripLogo,
-// }
+import wisebitsLogo from '../assets/logos/wisebits.png'
+import amulexLogo from '../assets/logos/amulex.svg'
+import route4meLogo from '../assets/logos/route4me.svg'
+import vsemaykiLogo from '../assets/logos/vsemayki.svg'
+const logos = {
+  wisebits: wisebitsLogo,
+  amulex: amulexLogo,
+  route4me: route4meLogo,
+  vsemayki: vsemaykiLogo,
+}
 </script>
 
 <template>
@@ -52,16 +51,11 @@ const projects = computed(() => tm('projects.items'));
               <div
                 class="w-[180px] h-10 rounded-md bg-slate-950 border border-slate-800 flex items-center justify-center overflow-hidden shrink-0"
                 >
-                <span class="text-xs font-semibold tracking-wide text-slate-200">
-                  {{ project.logoLabel }}
-                </span>
-                <!--
                 <img
                   :src="logos[project.id]"
                   :alt="project.logoLabel"
                   class="w-full h-full object-contain"
                 />
-                -->
               </div>
 
               <div class="space-y-0.5">
