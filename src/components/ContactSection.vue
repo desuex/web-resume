@@ -5,15 +5,17 @@ import {computed} from "vue";
 const {t, tm} = useI18n();
 const EMAIL = 'hire@dsxm.org'
 const GITHUB = 'https://github.com/desuex'
-const WEBSITE = 'https://dsxm.org'
 const LINKEDIN = 'https://linkedin.com/in/dsxm'
 const TELEGRAM = 'https://t.me/dsmexe'
+import telegramIcon from '../assets/icons/telegram.svg'
+import linkedinIcon from '../assets/icons/linkedin.svg'
+import githubIcon from '../assets/icons/github.svg'
+import emailIcon from '../assets/icons/email.svg'
 const contacts = computed(() => [
-  {label: EMAIL, url: `mailto:${EMAIL}`},
-  {label: GITHUB, url: GITHUB},
-  {label: LINKEDIN, url: LINKEDIN},
-  {label: WEBSITE, url: WEBSITE},
-  {label: TELEGRAM, url: TELEGRAM},
+  {label: EMAIL, url: `mailto:${EMAIL}`, icon: emailIcon},
+  {label: GITHUB, url: GITHUB, icon: githubIcon},
+  {label: LINKEDIN, url: LINKEDIN, icon: linkedinIcon},
+  {label: TELEGRAM, url: TELEGRAM, icon: telegramIcon},
 ]);
 </script>
 
@@ -47,7 +49,13 @@ const contacts = computed(() => [
           :key="item.url"
           class="flex items-center gap-3"
         >
-          <div class="w-6 h-6 rounded-full bg-sky-500/20 border border-sky-500/40"></div>
+          <div class="w-6 h-6 rounded-full bg-sky-100 border border-sky-500/40">
+            <img
+                :src="item.icon"
+                :alt="item.label"
+                class="w-full h-full object-contain"
+            />
+          </div>
           <a
               :href="item.url"
               target="_blank"
